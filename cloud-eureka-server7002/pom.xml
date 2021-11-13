@@ -5,7 +5,7 @@
     <artifactId>springcloud2020</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>cloud-eureka-server7001</artifactId>
+  <artifactId>cloud-eureka-server7002</artifactId>
   <dependencies>
   		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
@@ -39,5 +39,5 @@
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
 	</dependency>
-  </dependencies> 
+  </dependencies>   
 </project>
