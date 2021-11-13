@@ -16,9 +16,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 public class OrderController {
-	public static final String PAYMENT_URL="http://localhost:8001/"; 
+	public static final String PAYMENT_URL="http://CLOUD-PAYMENT-SERVICE/"; 
 	@Resource
 	RestTemplate restTemplate;
+	
+
 	@GetMapping(value="/consumer/payment/create")
 	public CommonResult<Payment> create(Payment payment) {
 		return restTemplate.postForObject(PAYMENT_URL+"payment/create", payment, CommonResult.class);
