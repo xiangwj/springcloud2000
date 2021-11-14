@@ -1,12 +1,8 @@
 package com.atguigu.springcloud.controller;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,9 +22,6 @@ public class PaymentController {
 	PaymentService paymentService;
 	@Value("${server.port}")
 	private String serverPort;
-	
-	@Resource
-	DiscoveryClient discoveryClient;
 	@PostMapping(value="/payment/create")
 	public CommonResult<Payment> create(@RequestBody Payment payment) {
 		Long result = paymentService.create(payment);
@@ -49,16 +42,5 @@ public class PaymentController {
 			return new CommonResult(444,"没有对应记录"+serverPort,null);
 		}
 	}
-	@GetMapping("/payment/discovery")
-	public Object discover() {
-		List<String> services =discoveryClient.getServices();
-		for(String service:services) {
-			log.info("*****service:"+service);
-		}
-		List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-		for(ServiceInstance instance:instances) {
-			log.info("***instance:"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
-		}
-		return services;
-	}
+		
 }
