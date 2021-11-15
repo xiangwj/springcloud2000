@@ -6,4 +6,6 @@
 .classpath
 .factorypath
 .project
-target/**
+**/target/**
+**/.settings/**
+**/target/classes/**

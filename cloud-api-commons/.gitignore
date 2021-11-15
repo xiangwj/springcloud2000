@@ -36,3 +36,7 @@ build/
 /target/
 /.settings/
 src/main/webapp/view/
+target/**
+.settings/**
+/target/**
+/.settings/**
