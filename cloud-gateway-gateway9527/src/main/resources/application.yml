@@ -12,7 +12,8 @@ spring:  application:    name: cloud-gateway
       discovery:        locator:          enabled: true      routes:      - id: payment_routh1
         uri: lb://cloud-payment-service
         predicates:        - Path= /payment/get/**
-        - After= 2021-11-15T21:34:07.577+08:00[Asia/Shanghai]
+        
+        
                - id: payment_routh2
         uri: lb://cloud-payment-service
         predicates:
