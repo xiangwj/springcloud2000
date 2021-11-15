@@ -14,7 +14,7 @@ spring:
     
   cloud:
     zookeeper:
-      connect-string: 192.168.213.119:2181
+      connect-string: centos.cnx.com:2181
 
 
 mybatis:
