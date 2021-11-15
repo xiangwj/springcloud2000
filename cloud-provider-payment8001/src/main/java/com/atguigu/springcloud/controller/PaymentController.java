@@ -17,6 +17,7 @@ import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
 import com.atguigu.springcloud.service.PaymentService;
 
+import io.micrometer.core.instrument.util.TimeUtils;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -63,6 +64,16 @@ public class PaymentController {
 	}
 	@GetMapping("/payment/lb")
 	public String getPaymentLB() {
+		return ""+serverPort;
+	}
+	@GetMapping("/payment/timeout")
+	public String paymentTimeOut() {
+		try {
+			Thread.sleep(3000);
+			
+		}catch(Exception e) {
+			
+		}
 		return ""+serverPort;
 	}
 }
