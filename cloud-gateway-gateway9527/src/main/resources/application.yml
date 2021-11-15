@@ -8,11 +8,12 @@ eureka:
      defaultZone: http://localhost:7001/eureka/
      #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/     instance:    hostname: cloud-gateway-service
 spring:  application:    name: cloud-gateway
-  cloud:    gateway:      routes:      - id: payment_routh1
-        uri: http://localhost:8001
+  cloud:    gateway:
+      discovery:        locator:          enabled: true      routes:      - id: payment_routh1
+        uri: lb://cloud-payment-service
         predicates:        - Path= /payment/get/**
                - id: payment_routh2
-        uri: http://localhost:8001
+        uri: lb://cloud-payment-service
         predicates:
         - Path=/payment/lb/**
           
