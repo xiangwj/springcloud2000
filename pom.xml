@@ -107,5 +107,6 @@
 		<module>cloud-provider-hystrix-payment8001</module>
 		<module>cloud-consumer-hystrix-order80</module>
 		<module>cloud-consumer-feign-hystrix-order80</module>
+		<module>cloud-consumer-hystrix-dashbord9001</module>
 	</modules>
 </project>
