@@ -36,3 +36,5 @@ build/
 /target/
 /.settings/
 src/main/webapp/view/
+/target/**
+/target/classes
