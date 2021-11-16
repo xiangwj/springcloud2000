@@ -109,5 +109,6 @@
 		<module>cloud-consumer-feign-hystrix-order80</module>
 		<module>cloud-consumer-hystrix-dashbord9001</module>
 		<module>cloud-gateway-gateway9527</module>
+		<module>cloud-configcenter-3344</module>
 	</modules>
 </project>

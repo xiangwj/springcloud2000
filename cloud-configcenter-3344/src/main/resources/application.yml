@@ -1,0 +1,7 @@
+server:
+  port: 3344
+spring:  application:    name: cloud-config-center
+  cloud:    config:      server:        git:          uri: git@github.com:xiangwj/configcenter.git
+          search-paths:           - configcenter        label: main
+eureka:  client:    service-url:      defaultZone: http://eureka7001.com:7001/eureka
+                    
