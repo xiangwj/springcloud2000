@@ -6,7 +6,8 @@ spring:
   
     cloud:    nacos:      config:        server-addr: centos.cnx.com:8848        file-extension: yaml
         group: DEFAULT_GROUP
-              discovery:        server-addr: centos.cnx.com:8848
+        namespace: d3fec90a-f7af-4db0-9c1d-63e5ec3836ff      discovery:        server-addr: centos.cnx.com:8848
+        
         
       
 
