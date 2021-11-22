@@ -2,6 +2,11 @@ server:
   port: 3344
 spring:  application:    name: cloud-config-center
   cloud:    config:      server:        git:          uri: git@github.com:xiangwj/configcenter.git
-          search-paths:           - configcenter        label: main
+          search-paths:           - configcenter        label: main  rabbitmq:    host: centos.cnx.com
+    port: 5672
+    username: admin
+    password: 111111
+
 eureka:  client:    service-url:      defaultZone: http://eureka7001.com:7001/eureka
-                    
+management:  endpoints:    web:      exposure:        include: 'bus-refresh'          
+      
